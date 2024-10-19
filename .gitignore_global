@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDE (IntelliJ, GoLand, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim/Neovim
+*~
+*.swp
+*.swo
+
+# macOS binaries
+*.out
+
+# Windows binaries
+*.exe
+*.dll
+*.obj
+
+# Git config files
+.gitconfig
+.gitignore_global
+
+# Backup and temporary files
+*~
+*.bak
+*.log
