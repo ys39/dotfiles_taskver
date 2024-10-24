@@ -1,0 +1,16 @@
+[alias]
+    b = branch
+    co = checkout
+    ci = commit
+    cm = commit -m
+    st = status
+    lo = log --oneline
+    ad = add -A
+    al = config --get-regexp ^alias\\.
+[commit]
+    template = ~/.commit_template
+[core]
+    editor = vim
+[include]
+    path = ~/.gitconfig.local
+
