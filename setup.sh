@@ -21,11 +21,10 @@ echo "Creating symlinks for bash and zsh..."
 # bash settings
 create_symlink "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
 create_symlink "$DOTFILES_DIR/.bash_profile" "$HOME/.bash_profile"
-create_symlink "$DOTFILES_DIR/.bash_aliases" "$HOME/.bash_aliases"
+create_symlink "$DOTFILES_DIR/.aliases" "$HOME/.aliases"
 
 # zsh settings
 create_symlink "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
-create_symlink "$DOTFILES_DIR/.zsh_aliases" "$HOME/.zsh_aliases"
 
 # editor settings
 create_symlink "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"

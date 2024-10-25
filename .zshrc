@@ -33,7 +33,7 @@ setopt auto_cd
 setopt no_flow_control
 
 #################################  ALIASES  #################################
-if [ -f ~/.zsh_aliases ]; then
-  source ~/.zsh_aliases
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi
 
