@@ -22,5 +22,6 @@
     # git
     ln -s ./dotfiles/.commit_template ~/.commit_template
     ln -s ./dotfiles/.gitconfig ~/.gitconfig
+    ln -s ./dotfiles/.gitignore_global ~/.gitignore_global
     touch ~/.gitconfig.local
     ```

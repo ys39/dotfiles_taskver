@@ -11,6 +11,12 @@
     template = ~/.commit_template
 [core]
     editor = vim
+[color]
+    ui = auto
+[diff]
+    tool = vimdiff
+    renames = copies
+    mnemonicprefix = true
 [include]
     path = ~/.gitconfig.local
 
