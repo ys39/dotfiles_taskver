@@ -12,6 +12,28 @@ indent_size = 4
 [*.go]
 indent_style = tab
 indent_size = 4
+max_line_length = 100
+
+[*.php]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+[*.html]
+indent_style = space
+indent_size = 4
+
+[*.css]
+indent_style = space
+indent_size = 4
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[*.ts]
+indent_style = space
+indent_size = 2
 
 [Makefile]
 indent_style = tab
@@ -22,12 +44,11 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = false
 
-[*.yml]
+[*.json]
 indent_style = space
 indent_size = 2
-max_line_length = 120
 
-[*.yaml]
+[*.{yml,yaml}]
 indent_style = space
 indent_size = 2
 max_line_length = 120
