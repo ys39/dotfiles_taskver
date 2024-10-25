@@ -8,24 +8,25 @@
 
 -   [user]部分は~/.gitconfig.local にまとめる
 
-#### シンボリックリンク
+#### セットアップ
 
 ```bash
-cd ~
+git clone git@github.com:ys39/dotfiles.git
+cd dotfiles
+sh ./setup.sh
 
-# bash settings
-ln -s ./dotfiles/.bashrc ~/.bashrc
-ln -s ./dotfiles/.bash_profile ~/.bash_profile # 必要に応じて
-ln -s ./dotfiles/.bash_aliases ~/.bash_aliases
-
-# editor settings
-ln -s ./dotfiles/.vimrc ~/.vimrc
-ln -s ./dotfiles/.editorconfig ~/.editorconfig
-
-# git settings
-ln -s ./dotfiles/.commit_template ~/.commit_template
-ln -s ./dotfiles/.gitconfig ~/.gitconfig
-ln -s ./dotfiles/.gitignore_global ~/.gitignore_global
-touch ./dotfiles/.gitconfig.local
-ln -s ./dotfiles/.gitconfig.local ~/.gitconfig.local
+# ~/dotfiles$ ./setup.sh
+# $ Creating symlinks for bash and zsh...
+# ~/.bashrc already exists, skipping...
+# ~/.bash_profile already exists, skipping...
+# ~/.bash_aliases already exists, skipping...
+# ~/.zshrc already exists, skipping...
+# ~/.zsh_aliases already exists, skipping...
+# ~/.vimrc already exists, skipping...
+# ~/.editorconfig already exists, skipping...
+# ~/.commit_template already exists, skipping...
+# ~/.gitconfig already exists, skipping...
+# ~/.gitignore_global already exists, skipping...
+# ~/.gitconfig.local already exists, skipping...
+# All symlinks created successfully!
 ```
