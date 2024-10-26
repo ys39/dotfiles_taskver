@@ -3,7 +3,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(~/.rbenv/bin/rbenv init - bash)"
 export PATH="$PATH:/usr/local/go/bin"
-export GOPATH='~/.gopath'
+export GOPATH="$HOME/.gopath"
 export PATH="$PATH:$(go env GOPATH)/bin"
 . "$HOME/.cargo/env"
 export WASMTIME_HOME="$HOME/.wasmtime"
