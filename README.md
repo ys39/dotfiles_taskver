@@ -1,32 +1,21 @@
 ### dotfiles
 
--   自身が利用する dotfiles を整理するための repository
+* 自身が利用する dotfiles を整理するための repository
+* Taskfileで管理する
 
----
+### requirements
+* git
+* [taskfile](https://taskfile.dev/)
+* [stow](https://www.gnu.org/software/stow/)
 
 #### .gitconfig について
 
--   [user]部分は~/.gitconfig.local にまとめる
+* user部分は~/.gitconfig.local にまとめて、Git管理を外している
 
 #### セットアップ
 
 ```bash
-git clone git@github.com:ys39/dotfiles.git
+git clone git@github.com:ys39/dotfiles_taskver.git dotfiles
 cd dotfiles
-make
-
-# Setting up dotfiles...
-# sh ./setup.sh
-# Creating symlinks for bash and zsh...
-# ~/.bashrc already exists, skipping...
-# ~/.bash_profile already exists, skipping...
-# ~/.aliases already exists, skipping...
-# ~/.zshrc already exists, skipping...
-# ~/.vimrc already exists, skipping...
-# ~/.editorconfig already exists, skipping...
-# ~/.commit_template already exists, skipping...
-# ~/.gitconfig already exists, skipping...
-# ~/.gitignore_global already exists, skipping...
-# ~/.gitconfig.local already exists, skipping...
-# All symlinks created successfully!
+task setup
 ```

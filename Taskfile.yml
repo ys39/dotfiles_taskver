@@ -1,0 +1,40 @@
+version: '3'
+
+vars:
+  DOTFILES_DIR: "{{.TASKFILE_DIR}}"
+  SCRIPTS_DIR: "{{.DOTFILES_DIR}}/scripts"
+  HOME_DIR: "{{.HOME}}"
+
+tasks:
+  create:
+    desc: "Create dot-gitconfig.local if not present"
+    cmds:
+      - sh "{{.SCRIPTS_DIR}}/setup_gitconfig_local.sh"
+
+  link:
+    desc: "Create symlinks for dotfiles"
+    cmds:
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" shell
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" bash
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" zsh
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" editor
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" git
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" homebrew
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" wsl
+
+  unlink:
+    desc: "Remove symlinks for dotfiles"
+    cmds:
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D shell
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D bash
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D zsh
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D editor
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D git
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D homebrew
+      - stow --dotfiles -v -d "{{.DOTFILES_DIR}}" -t "{{.HOME_DIR}}" -D wsl
+
+  setup:
+    desc: "Run both create and link tasks"
+    cmds:
+      - task: create
+      - task: link
