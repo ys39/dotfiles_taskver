@@ -1,6 +1,6 @@
 tap "homebrew/bundle"
-
+brew "go-task"
+brew "stow"
 brew "tree"
-
 cask "keepassx"
 cask "warp"
