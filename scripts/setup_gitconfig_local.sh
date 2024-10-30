@@ -1,6 +1,5 @@
 #!/bin/sh
 
-#DOTFILES_GIT_DIR="$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)"
 DOTFILES_DIR="$(cd "$(dirname ${BASH_SOURCE:-$0})/.." && pwd)"
 GIT_DIR="$DOTFILES_DIR/git"
 
