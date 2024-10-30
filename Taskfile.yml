@@ -6,6 +6,12 @@ vars:
   HOME_DIR: "{{.HOME}}"
 
 tasks:
+  default:
+    aliases: [check]
+    desc: "List symlinks created from dotfiles"
+    cmds:
+      - sh "{{.SCRIPTS_DIR}}/check_symlink.sh"
+
   create:
     desc: "Create dot-gitconfig.local if not present"
     cmds:
