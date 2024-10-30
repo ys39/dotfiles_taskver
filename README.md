@@ -8,11 +8,11 @@
 * [taskfile](https://taskfile.dev/)
 * [stow](https://www.gnu.org/software/stow/)
 
-#### .gitconfig について
+### .gitconfig について
 
 * user部分は~/.gitconfig.local にまとめて、Git管理を外している
 
-#### セットアップ
+### セットアップ
 
 ```bash
 git clone git@github.com:ys39/dotfiles_taskver.git dotfiles
